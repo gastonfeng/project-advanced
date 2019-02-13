@@ -18,39 +18,39 @@ class Project(models.Model):
     _track = {
         'state': {
             'project_wbs.mt_change_2-draft': (
-                lambda self, cr, uid, obj,
+                lambda self,  obj,
                 ctx=None: obj['state'] in ['2-draft']
             ),
             'project_wbs.mt_change_3-active': (
-                lambda self, cr, uid, obj,
+                lambda self,  obj,
                 ctx=None: obj['state'] in ['3-active']
             ),
             'project_wbs.mt_change_4-accepted': (
-                lambda self, cr, uid, obj,
+                lambda self,  obj,
                 ctx=None: obj['state'] in ['4-accepted']
             ),
             'project_wbs.mt_change_5-in_progress': (
-                lambda self, cr, uid, obj,
+                lambda self,  obj,
                 ctx=None: obj['state'] in ['5-in_progress']
             ),
             'project_wbs.mt_change_6-closure': (
-                lambda self, cr, uid, obj,
+                lambda self,  obj,
                 ctx=None: obj['state'] in ['6-closure']
             ),
             'project_wbs.mt_change_7-done': (
-                lambda self, cr, uid, obj,
+                lambda self,  obj,
                 ctx=None: obj['state'] in ['7-done']
             ),
             'project_wbs.mt_change_91-rejected': (
-                lambda self, cr, uid, obj,
+                lambda self,  obj,
                 ctx=None: obj['state'] in ['91-rejected']
             ),
             'project_wbs.mt_change_92-withdrawn': (
-                lambda self, cr, uid, obj,
+                lambda self,  obj,
                 ctx=None: obj['state'] in ['92-withdrawn']
             ),
             'project_wbs.mt_change_93-deferred': (
-                lambda self, cr, uid, obj,
+                lambda self,  obj,
                 ctx=None: obj['state'] in ['93-deferred']
             )
         }
@@ -116,23 +116,23 @@ class Project(models.Model):
     #         res.append((project_item.id, data))
     #     return res
 
-    @api.multi
-    @api.depends('name')
-    def name_get(self):
-        """
-        NEW VERSION
-        full code + name should suffice, otherwise the search view gets
-        too cluttered
-        """
-        res = []
-        for project_item in self:
-            data = []
-            res2 = project_item.code_get()
-            if res2 and res2[0][1]:
-                data = '[' + res2[0][1] + '] ' + project_item.name
-
-            res.append((project_item.id, data))
-        return res
+    # @api.multi
+    # @api.depends('name')
+    # def name_get(self):
+    #     """
+    #     NEW VERSION
+    #     full code + name should suffice, otherwise the search view gets
+    #     too cluttered
+    #     """
+    #     res = []
+    #     for project_item in self:
+    #         data = []
+    #         res2 = project_item.code_get()
+    #         if res2 and res2[0][1]:
+    #             data = '[' + res2[0][1] + '] ' + project_item.name
+    #
+    #         res.append((project_item.id, data))
+    #     return res
 
     @api.multi
     @api.depends('code')
