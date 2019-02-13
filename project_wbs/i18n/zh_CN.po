@@ -1,0 +1,356 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* project_wbs
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-08 14:38+0000\n"
+"PO-Revision-Date: 2019-02-09 12:42+0800\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.2.1\n"
+"Last-Translator: \n"
+"Language: zh_CN\n"
+
+#. module: project_wbs
+#: model:ir.ui.view,arch_db:project_wbs.view_project_kanban
+msgid "<span class=\"o_label\">WBS Elements</span>"
+msgstr ""
+
+#. module: project_wbs
+#: model:ir.model,name:project_wbs.model_account_analytic_account
+msgid "Analytic Account"
+msgstr "分析账户"
+
+#. module: project_wbs
+#: model:ir.ui.view,arch_db:project_wbs.edit_project
+msgid "Append this project to another one using analytic accounts hierarchy"
+msgstr "使用分析帐户层次结构将此项目附加到另一个项目"
+
+#. module: project_wbs
+#: selection:account.analytic.account,state:0
+msgid "Cancelled"
+msgstr "已取消"
+
+#. module: project_wbs
+#: selection:account.analytic.account,account_class:0
+msgid "Change"
+msgstr "变更"
+
+#. module: project_wbs
+#: model:ir.ui.view,arch_db:project_wbs.view_project
+msgid "Child WBS elements"
+msgstr "WBS子元素"
+
+#. module: project_wbs
+#: model:ir.model.fields,field_description:project_wbs.field_account_analytic_account_account_class
+#: model:ir.model.fields,field_description:project_wbs.field_project_project_account_class
+#: model:ir.ui.view,arch_db:project_wbs.edit_project
+#: model:ir.ui.view,arch_db:project_wbs.view_account_analytic_account_form
+#: model:ir.ui.view,arch_db:project_wbs.view_account_analytic_account_search
+#: model:ir.ui.view,arch_db:project_wbs.view_project
+#: model:ir.ui.view,arch_db:project_wbs.view_project_project_filter
+#: model:ir.ui.view,arch_db:project_wbs.view_project_project_group_filter
+msgid "Class"
+msgstr "类"
+
+#. module: project_wbs
+#: model:ir.actions.act_window,help:project_wbs.open_view_project_wbs
+msgid "Click to start a new project."
+msgstr "点击创建一个新项目。"
+
+#. module: project_wbs
+#: selection:account.analytic.account,state:0
+msgid "Closed"
+msgstr "已关闭"
+
+#. module: project_wbs
+#: model:ir.ui.view,arch_db:project_wbs.edit_project
+#: model:ir.ui.view,arch_db:project_wbs.view_project
+msgid "Code"
+msgstr "代码"
+
+#. module: project_wbs
+#: model:ir.model.fields,help:project_wbs.field_account_analytic_account_complete_wbs_code_calc
+#: model:ir.model.fields,help:project_wbs.field_project_project_complete_wbs_code_calc
+msgid "Computed WBS code"
+msgstr "计算wbs代码"
+
+#. module: project_wbs
+#: model:ir.ui.view,arch_db:project_wbs.edit_project
+msgid "Create child WBS element"
+msgstr "创建WBS子元素"
+
+#. module: project_wbs
+#: selection:account.analytic.account,account_class:0
+msgid "Deliverable"
+msgstr "可交付"
+
+#. module: project_wbs
+#: model:ir.actions.act_window,name:project_wbs.act_project_project_2_deliverable_all
+#: model:ir.actions.act_window,name:project_wbs.open_view_project_deliverables
+msgid "Deliverables"
+msgstr "可交付"
+
+#. module: project_wbs
+#: code:addons/project_wbs/models/project_project.py:258
+#, python-format
+msgid "Details"
+msgstr "详情"
+
+#. module: project_wbs
+#: model:ir.actions.act_window,name:project_wbs.open_view_project_form
+msgid "Edit project"
+msgstr "编辑项目"
+
+#. module: project_wbs
+#: model:ir.ui.view,arch_db:project_wbs.view_project
+msgid "End Date"
+msgstr "结束日期"
+
+#. module: project_wbs
+#: model:ir.model.fields,field_description:project_wbs.field_account_analytic_account_complete_wbs_code
+#: model:ir.model.fields,field_description:project_wbs.field_account_analytic_account_complete_wbs_code_calc
+#: model:ir.model.fields,field_description:project_wbs.field_project_project_complete_wbs_code
+#: model:ir.model.fields,field_description:project_wbs.field_project_project_complete_wbs_code_calc
+msgid "Full WBS Code"
+msgstr "完整的 wbs 代码"
+
+#. module: project_wbs
+#: model:ir.model.fields,field_description:project_wbs.field_account_analytic_account_complete_wbs_name
+#: model:ir.model.fields,field_description:project_wbs.field_project_project_complete_wbs_name
+msgid "Full WBS path"
+msgstr "完整WBS路径"
+
+#. module: project_wbs
+#: model:ir.model.fields,help:project_wbs.field_account_analytic_account_complete_wbs_name
+#: model:ir.model.fields,help:project_wbs.field_project_project_complete_wbs_name
+msgid "Full path in the WBS hierarchy"
+msgstr "WBS层次的完整路径"
+
+#. module: project_wbs
+#: selection:account.analytic.account,state:0
+msgid "In Progress"
+msgstr "运行中"
+
+#. module: project_wbs
+#: model:ir.model.fields,field_description:project_wbs.field_account_analytic_account_wbs_indent
+#: model:ir.model.fields,field_description:project_wbs.field_project_project_wbs_indent
+msgid "Level"
+msgstr "层级"
+
+#. module: project_wbs
+#: model:ir.model.fields,field_description:project_wbs.field_account_analytic_account_manager_id
+#: model:ir.model.fields,field_description:project_wbs.field_project_project_manager_id
+msgid "Manager"
+msgstr "管理者"
+
+#. module: project_wbs
+#: model:ir.ui.view,arch_db:project_wbs.view_account_analytic_account_search2
+#: model:ir.ui.view,arch_db:project_wbs.view_project_project_group_filter
+msgid "Master Project"
+msgstr "主项目"
+
+#. module: project_wbs
+#: selection:account.analytic.account,state:0
+msgid "New"
+msgstr "新建"
+
+#. module: project_wbs
+#: model:ir.ui.view,arch_db:project_wbs.view_project
+msgid "Parent"
+msgstr "上级"
+
+#. module: project_wbs
+#: model:ir.ui.view,arch_db:project_wbs.edit_project
+msgid "Parent Analytic Account"
+msgstr "上级分析账户"
+
+#. module: project_wbs
+#: model:ir.ui.view,arch_db:project_wbs.view_project
+msgid "Parent WBS element"
+msgstr "上级WBS元素"
+
+#. module: project_wbs
+#: model:ir.ui.view,arch_db:project_wbs.view_project_kanban
+msgid "Parent:"
+msgstr "上级:"
+
+#. module: project_wbs
+#: selection:account.analytic.account,account_class:0
+msgid "Phase"
+msgstr "阶段"
+
+#. module: project_wbs
+#: model:ir.actions.act_window,name:project_wbs.open_view_project_phases
+msgid "Phases"
+msgstr "阶段"
+
+#. module: project_wbs
+#: selection:account.analytic.account,account_class:0
+msgid "Portfolio"
+msgstr "投资组合"
+
+#. module: project_wbs
+#: selection:account.analytic.account,account_class:0
+msgid "Program"
+msgstr "程序"
+
+#. module: project_wbs
+#: selection:account.analytic.account,account_class:0
+msgid "Project"
+msgstr "项目"
+
+#. module: project_wbs
+#: model:ir.ui.view,arch_db:project_wbs.view_project
+msgid "Project Form View"
+msgstr "项目表单"
+
+#. module: project_wbs
+#: model:ir.model.fields,field_description:project_wbs.field_project_project_project_child_complete_ids
+msgid "Project Hierarchy"
+msgstr "项目层次结构"
+
+#. module: project_wbs
+#: model:ir.model.fields,field_description:project_wbs.field_account_analytic_account_user_id
+msgid "Project Manager"
+msgstr "项目管理者"
+
+#. module: project_wbs
+#: model:ir.actions.act_window,name:project_wbs.group_project
+#: model:ir.ui.menu,name:project_wbs.menu_project_wbs_project
+msgid "Projects"
+msgstr "项目"
+
+#. module: project_wbs
+#: model:ir.actions.act_window,help:project_wbs.open_view_project_wbs
+msgid ""
+"Projects are used to organize your activities; plan\n"
+"              tasks, track issues, invoice timesheets. You can define\n"
+"              internal projects (R&amp;D, Improve Sales Process),\n"
+"              private projects (My Todos) or customer ones."
+msgstr ""
+"项目用于组织您的活动; 计划\n"
+"               任务，跟踪问题，发票时间表。 你可以定义\n"
+"               内部项目（R＆amp; D，改进销售流程），\n"
+"               私人项目（My Todos）或客户项目。"
+
+#. module: project_wbs
+#: model:ir.model.fields,field_description:project_wbs.field_account_analytic_account_project_analytic_id
+#: model:ir.model.fields,field_description:project_wbs.field_project_project_project_analytic_id
+msgid "Root Analytic Account"
+msgstr "根分析账户"
+
+#. module: project_wbs
+#: model:ir.ui.view,arch_db:project_wbs.view_project
+msgid "Start Date"
+msgstr "起始日期"
+
+#. module: project_wbs
+#: model:ir.model.fields,field_description:project_wbs.field_account_analytic_account_state
+#: model:ir.model.fields,field_description:project_wbs.field_project_project_state
+msgid "Status"
+msgstr "状态"
+
+#. module: project_wbs
+#: selection:account.analytic.account,state:0
+msgid "Template"
+msgstr "模版"
+
+#. module: project_wbs
+#: model:ir.model.fields,help:project_wbs.field_account_analytic_account_account_class
+#: model:ir.model.fields,help:project_wbs.field_project_project_account_class
+msgid ""
+"The classification allows you to create a proper project Work Breakdown "
+"Structure"
+msgstr "分类允许您创建适当的项目工作分解结构"
+
+#. module: project_wbs
+#: model:ir.model.fields,help:project_wbs.field_account_analytic_account_complete_wbs_code
+#: model:ir.model.fields,help:project_wbs.field_project_project_complete_wbs_code
+msgid ""
+"The full WBS code describes the full path of this component within the "
+"project WBS hierarchy"
+msgstr "完整的WBS代码描述了项目WBS层次结构中此组件的完整路径"
+
+#. module: project_wbs
+#: selection:account.analytic.account,state:0
+msgid "To Renew"
+msgstr "更新"
+
+#. module: project_wbs
+#: model:ir.model.fields,field_description:project_wbs.field_project_project_c_wbs_code
+msgid "WBS Code"
+msgstr "wbs代码"
+
+#. module: project_wbs
+#: model:ir.ui.view,arch_db:project_wbs.edit_project
+#: model:ir.ui.view,arch_db:project_wbs.view_account_analytic_account_form
+#: model:ir.ui.view,arch_db:project_wbs.view_account_analytic_account_list
+#: model:ir.ui.view,arch_db:project_wbs.view_account_analytic_account_search
+#: model:ir.ui.view,arch_db:project_wbs.view_project_project_filter
+msgid "WBS code"
+msgstr "wbs代码"
+
+#. module: project_wbs
+#: model:ir.model,name:project_wbs.model_project_project
+msgid "WBS element"
+msgstr "WBS元素"
+
+#. module: project_wbs
+#: model:ir.ui.view,arch_db:project_wbs.edit_project
+msgid "WBS element name"
+msgstr "WBS元素名"
+
+#. module: project_wbs
+#: model:ir.actions.act_window,name:project_wbs.create_wbs_element
+#: model:ir.actions.act_window,name:project_wbs.open_view_project_wbs
+#: model:ir.model.fields,field_description:project_wbs.field_project_project_wbs_count
+msgid "WBS elements"
+msgstr "WBS元素"
+
+#. module: project_wbs
+#: model:ir.actions.act_window,name:project_wbs.open_view_wbs_kanban
+msgid "WBS kanban"
+msgstr "WBS看板"
+
+#. module: project_wbs
+#: model:ir.ui.view,arch_db:project_wbs.view_account_analytic_account_search
+#: model:ir.ui.view,arch_db:project_wbs.view_project_project_filter
+msgid "WBS name"
+msgstr "wbs名称"
+
+#. module: project_wbs
+#: model:ir.actions.act_window,name:project_wbs.open_view_wbs_tree
+msgid "WBS overview"
+msgstr "WBS概览"
+
+#. module: project_wbs
+#: model:ir.ui.view,arch_db:project_wbs.edit_project
+msgid "Work Breakdown Structure"
+msgstr "WBS分解结构"
+
+#. module: project_wbs
+#: selection:account.analytic.account,account_class:0
+msgid "Work Package"
+msgstr "工作包"
+
+#. module: project_wbs
+#: model:ir.actions.act_window,name:project_wbs.open_view_project_work_packages
+#, fuzzy
+msgid "Work Packages"
+msgstr "工作包"
+
+#. module: project_wbs
+#: model:ir.actions.act_window,help:project_wbs.open_view_project_wbs
+msgid ""
+"You will be able collaborate with internal users on\n"
+"              projects or invite customers to share your activities."
+msgstr ""
+"您将能够与内部用户进行协作\n"
+"               项目或邀请客户分享您的活动。"
