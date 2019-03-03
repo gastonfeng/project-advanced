@@ -9,12 +9,8 @@
                ref="analytic.view_account_analytic_account_list"/>
         <field name="arch" type="xml">
             <xpath expr='//tree' position="attributes">
-                <attribute name="decoration-info">account_class in
-                    'deliverable, phase'
-                </attribute>
-                <attribute name="decoration-it">account_class ==
-                    'work_package'
-                </attribute>
+                <attribute name="decoration-info">account_class in 'deliverable, phase'</attribute>
+                <attribute name="decoration-it">account_class == 'work_package'</attribute>
                 <attribute name="default_order">complete_wbs_code</attribute>
             </xpath>
             <field name="code" position="attributes">
