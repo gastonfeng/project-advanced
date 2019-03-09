@@ -110,95 +110,36 @@ class AccountAnalyticAccount(models.Model):
     def _default_user(self):
         return self.env.context.get('user_id', self.env.user)
 
-    wbs_indent = fields.Char(
-        compute=_wbs_indent_calc,
-        string='Level',
-        readonly=True
-    )
-    complete_wbs_code_calc = fields.Char(
-        compute=_complete_wbs_code_calc,
-        string='Full WBS Code',
-        help='Computed WBS code'
-    )
-    complete_wbs_code = fields.Char(
-        compute=_complete_wbs_code_calc,
-        string='Full WBS Code',
-        help='The full WBS code describes the full path of this component '
-             'within the project WBS hierarchy',
-        store=True
-    )
-    complete_wbs_name = fields.Char(
-        compute=_complete_wbs_name_calc,
-        string='Full WBS path',
-        help='Full path in the WBS hierarchy',
-        store=True
-    )
-    project_analytic_id = fields.Many2one(
-        comodel_name='account.analytic.account',
-        compute=_get_project_analytic_id,
-        string='Root Analytic Account',
-        store=True
-    )
-    user_id = fields.Many2one(
-        comodel_name='res.users',
-        string='Project Manager',
-        track_visibility='onchange',
-        default=_default_user
-    )
-    manager_id = fields.Many2one(
-        comodel_name='res.users',
-        string='Manager',
-        track_visibility='onchange'
-    )
+    wbs_indent = fields.Char(compute='_wbs_indent_calc', string='Level', readonly=True)
+    complete_wbs_code_calc = fields.Char(compute='_complete_wbs_code_calc', string='Full WBS Code',
+                                         help='Computed WBS code')
+    complete_wbs_code = fields.Char(compute='_complete_wbs_code_calc', string='Full WBS Code',
+                                    help='The full WBS code describes the full path of this component '             'within the project WBS hierarchy',
+                                    store=True)
+    complete_wbs_name = fields.Char(compute='_complete_wbs_name_calc', string='Full WBS path',
+                                    help='Full path in the WBS hierarchy', store=True)
+    project_analytic_id = fields.Many2one(comodel_name='account.analytic.account', compute='_get_project_analytic_id',
+                                          string='Root Analytic Account', store=True)
+    user_id = fields.Many2one(comodel_name='res.users', string='Project Manager', track_visibility='onchange',
+                              default=_default_user)
+    manager_id = fields.Many2one(comodel_name='res.users', string='Manager', track_visibility='onchange')
     state = fields.Selection(
-        [
-            ('1-template', 'Template'),
-            ('2-draft', 'Draft'),
-            ('3-active', 'Proposal'),
-            ('4-accepted', 'Plan'),
-            ('5-in_progress', 'In Progress'),
-            ('6-closure', 'Closure'),
-            ('7-done', 'Done'),
-            ('91-rejected', 'Rejected'),
-            ('92-withdraw', 'Withdrawn'),
-            ('93-deferred', 'Deferred'),
-        ],
-        string='Status',
-        default='2-draft',
-        required=True,
-        track_visibility='onchange'
-    )
+        [('1-template', 'Template'), ('2-draft', 'Draft'), ('3-active', 'Proposal'), ('4-accepted', 'Plan'),
+         ('5-in_progress', 'In Progress'), ('6-closure', 'Closure'), ('7-done', 'Done'), ('91-rejected', 'Rejected'),
+         ('92-withdraw', 'Withdrawn'), ('93-deferred', 'Deferred'), ], string='Status', default='2-draft',
+        required=True, track_visibility='onchange')
 
-    account_class = fields.Selection(
-        [
-            ('project', 'Project'),
-            ('phase', 'Phase'),
-            ('deliverable', 'Deliverable'),
-            ('work_package', 'Work Package'),
-        ],
-        string='Class',
-        help='The classification allows you to create a proper project '
-             'Work Breakdown Structure'
-    )
-    parent_id = fields.Many2one(
-        default=_default_parent,
-        string="Parent Analytic Account"
-    )
-    partner_id = fields.Many2one(
-        default=_default_partner
-    )
+    account_class = fields.Selection([('project', 'Project'), ('phase', 'Phase'), ('deliverable', 'Deliverable'),
+                                      ('work_package', 'Work Package'), ], string='Class',
+                                     help='The classification allows you to create a proper project '             'Work Breakdown Structure')
+    parent_id = fields.Many2one(default=_default_parent, string="Parent Analytic Account")
+    partner_id = fields.Many2one(default=_default_partner)
 
     """
     Cosmetic fields for a less cluttered kanban
     """
-    parent_short_name = fields.Char(
-        related='parent_id.name',
-        readonly=True
-    )
-    parent_code = fields.Char(
-        related='parent_id.complete_wbs_code',
-        readonly=True
-    )
+    parent_short_name = fields.Char(related='parent_id.name', readonly=True)
+    parent_code = fields.Char(related='parent_id.complete_wbs_code', readonly=True)
 
     @api.multi
     @api.depends('code')
