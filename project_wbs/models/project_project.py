@@ -173,7 +173,7 @@ class Project(models.Model):
         account.analytic.account
         """
         context = self.env.context or {}
-        if type(context.get('default_parent_id')) in (int, long):
+        if type(context.get('default_parent_id')) in (int):
             return context['default_parent_id']
         return None
 
@@ -202,6 +202,10 @@ class Project(models.Model):
         related='analytic_account_id.state',
         store=True,
         default='2-draft',
+        selection=[('1-template', 'Template'), ('2-draft', 'Draft'), ('3-active', 'Proposal'), ('4-accepted', 'Plan'),
+                   ('5-in_progress', 'In Progress'), ('6-closure', 'Closure'), ('7-done', 'Done'),
+                   ('91-rejected', 'Rejected'),
+                   ('92-withdraw', 'Withdrawn'), ('93-deferred', 'Deferred'), ],
         readonly=True,
         string='State',
         states={'2-draft': [('readonly', False)]},
