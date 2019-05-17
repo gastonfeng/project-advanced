@@ -160,7 +160,6 @@ class AccountAnalyticAccount(models.Model):
         return res
 
     @api.multi
-    @api.depends('name')
     def name_get(self):
         res = []
         for account in self:
